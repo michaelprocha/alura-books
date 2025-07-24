@@ -1,0 +1,24 @@
+@function px-to-rem($px){
+    @return $px / 16;
+}
+
+@mixin gradient{
+    background: #002F52;
+    background: linear-gradient(90deg,rgba(0, 47, 82, 1) 0%, rgba(50, 101, 137, 1) 100%);
+}
+
+@mixin button{
+
+}
+
+@mixin card{
+
+}
+
+@mixin sub-heading{
+
+}
+
+@mixin title-card{
+    
+}

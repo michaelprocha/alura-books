@@ -1,0 +1,49 @@
+@use "tools";
+@use "variables";
+
+.banner{
+    background-color: variables.$tertiary-color;
+    padding: tools.px-to-rem(26rem) tools.px-to-rem(16rem);
+    text-align: center;
+
+    &__subtitle{
+        font-family: variables.$font;
+        font-size: variables.$font-medium;
+        font-weight: variables.$weight-bold;
+        color: variables.$primary-color;
+        margin-bottom: tools.px-to-rem(7rem);
+    }
+
+    &__text{
+        font-family: variables.$font;
+        font-size: variables.$font-regular;
+        font-weight: variables.$weight-medium;
+        color: variables.$primary-color;
+        margin-bottom: tools.px-to-rem(19rem);
+    }
+
+    &__search{
+        border: tools.px-to-rem(1rem) solid variables.$primary-color;
+        border-radius: tools.px-to-rem(24rem);
+        width: 100%;
+        max-width: tools.px-to-rem(586rem);
+        height: tools.px-to-rem(44rem);
+        color: variables.$primary-color;
+        font-family: variables.$font;
+        font-weight: variables.$weight-regular;
+        font-size: variables.$font-small;
+        padding: 0 tools.px-to-rem(5rem) tools.px-to-rem(2rem) tools.px-to-rem(10rem);
+
+        &::placeholder {
+            font-family: variables.$font;
+            font-size: variables.$font-small;
+            font-weight: variables.$weight-regular;
+            color: variables.$primary-color;
+            text-align: center;
+            padding-left: tools.px-to-rem(30rem);
+            background-image: url(../assets/images/magnifying-glass.svg);
+            background-repeat: no-repeat;
+            background-position: 6% 90%;
+        }
+    }
+}

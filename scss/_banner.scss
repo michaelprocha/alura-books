@@ -1,46 +1,45 @@
 @use "tools";
-@use "variables";
 
 .banner{
-    background-color: variables.$tertiary-color;
-    padding: tools.px-to-rem(26rem) tools.px-to-rem(16rem);
+    background-color: tools.$tertiary-color;
+    padding: tools.px-to-rem(26) tools.px-to-rem(16);
     text-align: center;
 
     &__subtitle{
-        font-family: variables.$font;
-        font-size: variables.$font-medium;
-        font-weight: variables.$weight-bold;
-        color: variables.$primary-color;
-        margin-bottom: tools.px-to-rem(7rem);
+        font-family: tools.$font;
+        font-size: tools.$font-medium;
+        font-weight: tools.$weight-bold;
+        color: tools.$primary-color;
+        margin-bottom: tools.px-to-rem(7);
     }
 
     &__text{
-        font-family: variables.$font;
-        font-size: variables.$font-regular;
-        font-weight: variables.$weight-medium;
-        color: variables.$primary-color;
-        margin-bottom: tools.px-to-rem(19rem);
+        font-family: tools.$font;
+        font-size: tools.$font-regular;
+        font-weight: tools.$weight-medium;
+        color: tools.$primary-color;
+        margin-bottom: tools.px-to-rem(19);
     }
 
     &__search{
-        border: tools.px-to-rem(1rem) solid variables.$primary-color;
-        border-radius: tools.px-to-rem(24rem);
+        border: tools.px-to-rem(1) solid tools.$primary-color;
+        border-radius: tools.px-to-rem(24);
         width: 100%;
-        max-width: tools.px-to-rem(586rem);
-        height: tools.px-to-rem(44rem);
-        color: variables.$primary-color;
-        font-family: variables.$font;
-        font-weight: variables.$weight-regular;
-        font-size: variables.$font-small;
-        padding: 0 tools.px-to-rem(5rem) tools.px-to-rem(2rem) tools.px-to-rem(10rem);
+        max-width: tools.px-to-rem(586);
+        height: tools.px-to-rem(44);
+        color: tools.$primary-color;
+        font-family: tools.$font;
+        font-weight: tools.$weight-regular;
+        font-size: tools.$font-small;
+        padding: 0 tools.px-to-rem(5) tools.px-to-rem(2) tools.px-to-rem(10);
 
         &::placeholder {
-            font-family: variables.$font;
-            font-size: variables.$font-small;
-            font-weight: variables.$weight-regular;
-            color: variables.$primary-color;
+            font-family: tools.$font;
+            font-size: tools.$font-small;
+            font-weight: tools.$weight-regular;
+            color: tools.$primary-color;
             text-align: center;
-            padding-left: tools.px-to-rem(30rem);
+            padding-left: tools.px-to-rem(30);
             background-image: url(../assets/images/magnifying-glass.svg);
             background-repeat: no-repeat;
             background-position: 6% 90%;

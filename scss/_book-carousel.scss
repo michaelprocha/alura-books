@@ -1,0 +1,10 @@
+@use "tools";
+
+.book-carousel{
+    
+    &__subtitle{
+        @include tools.subtitle-carousel;
+    }
+    
+
+}

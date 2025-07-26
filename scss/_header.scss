@@ -1,8 +1,7 @@
-@use "variables";
 @use "tools";
 
 .header {
-    background-color: variables.$primary-color;
+    background-color: tools.$primary-color;
 
     &__container {
         display: grid;
@@ -12,14 +11,14 @@
 
     &__menu {
         position: relative;
-        padding: tools.px-to-rem(25rem) tools.px-to-rem(20rem);
+        padding: tools.px-to-rem(25) tools.px-to-rem(20);
         svg {
-            color: variables.$tertiary-color;
+            color: tools.$tertiary-color;
         }
         &-active {
             @include tools.gradient;
             svg {
-                color: variables.$primary-color;
+                color: tools.$primary-color;
             }
         }
     }
@@ -29,24 +28,24 @@
         &-active {
             display: inline-block;
             position: absolute;
-            color: variables.$tertiary-color;
-            background-color: variables.$primary-color;
-            top: tools.px-to-rem(74rem);
+            color: tools.$tertiary-color;
+            background-color: tools.$primary-color;
+            top: tools.px-to-rem(74);
             left: 0;
-            padding: tools.px-to-rem(20rem) tools.px-to-rem(100rem) tools.px-to-rem(20rem) tools.px-to-rem(20rem);
+            padding: tools.px-to-rem(20) tools.px-to-rem(100) tools.px-to-rem(20) tools.px-to-rem(20);
         }
     }
 
     &__logo {
-        padding-left: tools.px-to-rem(15rem);
+        padding-left: tools.px-to-rem(15);
     }
 
     &__shopping {
-        margin-left: tools.px-to-rem(15rem);
+        margin-left: tools.px-to-rem(15);
     }
 
     &__user {
-        margin-left: tools.px-to-rem(15rem);
-        padding-right: tools.px-to-rem(20rem);
+        margin-left: tools.px-to-rem(15);
+        padding-right: tools.px-to-rem(20);
     }
 }

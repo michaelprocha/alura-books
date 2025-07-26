@@ -56,7 +56,7 @@ body {
 }
 .header__menu-active {
   background: #002F52;
-  background: linear-gradient(90deg, rgb(0, 47, 82) 0%, rgb(50, 101, 137) 100%);
+  background: linear-gradient(90deg, #002F52 0%, #326589 100%);
 }
 .header__menu-active svg {
   color: #ffffff;
@@ -91,14 +91,14 @@ body {
 }
 .banner__subtitle {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 0.4375rem;
 }
 .banner__text {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 1.1875rem;
@@ -112,12 +112,12 @@ body {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 0 0.3125rem 0.125rem 0.625rem;
 }
 .banner__search::placeholder {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: #ffffff;
   text-align: center;
@@ -125,6 +125,16 @@ body {
   background-image: url(../assets/images/magnifying-glass.svg);
   background-repeat: no-repeat;
   background-position: 6% 90%;
+}
+
+.book-carousel__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #EB9B00;
+  text-align: center;
+  padding: 1.125rem 0;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=index.css.map */

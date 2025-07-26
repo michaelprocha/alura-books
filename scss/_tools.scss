@@ -1,10 +1,41 @@
 @function px-to-rem($px){
-    @return $px / 16;
+    @return ($px / 16) * 1rem;
 }
+
+$primary-color: #ffffff;
+$secondary-color: #EB9B00;
+$tertiary-color: #002F52;
+$complementary-color: #000000;
+$gradient-color: #326589; 
+
+$font: "Poppins", sans-serif;
+
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+
+$font-small: px-to-rem(14);
+$font-regular: px-to-rem(16);
+$font-medium: px-to-rem(18);
+$font-large: px-to-rem(20);
+$font-xlarge: px-to-rem(24);
+$font-xxlarge: px-to-rem(32);
+$font-xxxlarge: px-to-rem(36);
 
 @mixin gradient{
     background: #002F52;
-    background: linear-gradient(90deg,rgba(0, 47, 82, 1) 0%, rgba(50, 101, 137, 1) 100%);
+    background: linear-gradient(90deg,$tertiary-color 0%, $gradient-color 100%);
+}
+
+@mixin subtitle-carousel{
+    font-family: $font;
+    font-size: $font-medium;
+    font-weight: $weight-bold;
+    color: $secondary-color;
+    text-align: center;
+    padding: px-to-rem(18) 0;
+    text-transform: uppercase;
 }
 
 @mixin button{
@@ -12,10 +43,6 @@
 }
 
 @mixin card{
-
-}
-
-@mixin sub-heading{
 
 }
 

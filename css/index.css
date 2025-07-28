@@ -136,5 +136,20 @@ body {
   padding: 1.125rem 0;
   text-transform: uppercase;
 }
+.book-carousel__carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.book-carousel__book {
+  width: 50%;
+}
+.book-carousel__book-preview {
+  width: 25%;
+}
+.book-carousel__book-disable {
+  display: none;
+}
 
 /*# sourceMappingURL=index.css.map */

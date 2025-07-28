@@ -1,12 +1,15 @@
-@function px-to-rem($px){
+@function px-to-rem($px) {
     @return ($px / 16) * 1rem;
 }
 
 $primary-color: #ffffff;
-$secondary-color: #EB9B00;
-$tertiary-color: #002F52;
+$secondary-color: #eb9b00;
+$tertiary-color: #002f52;
 $complementary-color: #000000;
-$gradient-color: #326589; 
+$gradient-color: #326589;
+$background-color: #ebecee;
+$indicator-disable: #c4c4c4;
+$shadow: #858585;
 
 $font: "Poppins", sans-serif;
 
@@ -23,12 +26,11 @@ $font-xlarge: px-to-rem(24);
 $font-xxlarge: px-to-rem(32);
 $font-xxxlarge: px-to-rem(36);
 
-@mixin gradient{
-    background: #002F52;
-    background: linear-gradient(90deg,$tertiary-color 0%, $gradient-color 100%);
+@mixin gradient {
+    background: linear-gradient(90deg, $tertiary-color 0%, $gradient-color 100%);
 }
 
-@mixin subtitle-carousel{
+@mixin subtitle-carousel {
     font-family: $font;
     font-size: $font-medium;
     font-weight: $weight-bold;
@@ -36,16 +38,63 @@ $font-xxxlarge: px-to-rem(36);
     text-align: center;
     padding: px-to-rem(18) 0;
     text-transform: uppercase;
+    background-color: $primary-color;
 }
 
-@mixin button{
-
+@mixin backgroud-card {
+    padding: px-to-rem(10) px-to-rem(20);
+    background-color: $background-color;
 }
 
-@mixin card{
-
+@mixin card {
+    background-color: $primary-color;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: px-to-rem(20) px-to-rem(14);
+    border-radius: px-to-rem(10);
+    gap: px-to-rem(12);
 }
 
-@mixin title-card{
-    
+@mixin container-card {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(8);
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin subtitle-card {
+    font-family: $font;
+    font-size: $font-regular;
+    font-weight: $weight-bold;
+    color: $secondary-color;
+}
+
+@mixin title-card {
+    font-family: $font;
+    font-size: $font-medium;
+    font-weight: $weight-bold;
+    color: $tertiary-color;
+}
+
+@mixin text-card {
+    font-family: $font;
+    font-size: $font-small;
+    font-weight: $weight-regular;
+    color: $complementary-color;
+}
+
+@mixin icons-card {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+@mixin button-card {
+    padding: px-to-rem(12) px-to-rem(14);
+    background-color: $secondary-color;
+    font-family: $font;
+    font-size: $font-regular;
+    font-weight: $weight-bold;
+    color: $background-color;
 }

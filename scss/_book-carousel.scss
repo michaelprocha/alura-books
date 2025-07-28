@@ -1,26 +1,46 @@
 @use "tools";
 
-.book-carousel{
-    
-    &__subtitle{
+.book-carousel {
+    background-color: tools.$background-color;
+
+    &__subtitle {
         @include tools.subtitle-carousel;
     }
-    
-    &__carousel{
+
+    &__indicators {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: tools.px-to-rem(12) 0;
+    }
+
+    &__indicator {
+        width: tools.px-to-rem(10);
+        height: tools.px-to-rem(10);
+        border-radius: 5px;
+        @include tools.gradient;
+
+        &-disable {
+            background: tools.$indicator-disable;
+        }
+    }
+
+    &__carousel {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: tools.px-to-rem(15);
+        padding-bottom: tools.px-to-rem(10);
     }
 
-    &__book{
+    &__book {
         width: 50%;
 
-        &-preview{
+        &-preview {
             width: 25%;
         }
 
-        &-disable{
+        &-disable {
             display: none;
         }
     }

@@ -1,0 +1,33 @@
+@use "tools";
+
+.interest {
+    @include tools.backgroud-card;
+
+    &__card{
+        @include tools.card;
+    }
+
+    &__container{
+        @include tools.container-card;
+    }
+
+    &__subtitle {
+        @include tools.subtitle-card;
+    }
+
+    &__title {
+        @include tools.title-card;
+    }
+
+    &__text {
+        @include tools.text-card;
+    }
+
+    &__buttons{
+        @include tools.icons-card;
+    }
+
+    &__find_out{
+        @include tools.button-card;
+    }
+}

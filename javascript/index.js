@@ -11,6 +11,7 @@ let books = Array.from(document.querySelectorAll(".book-carousel__book"));
 books[0].classList.toggle("book-carousel__book-preview");
 books[2].classList.toggle("book-carousel__book-preview");
 
+
 carousel.addEventListener("click", () => {
 	const save = books[0];
 	carousel.appendChild(save); // move o primeiro para o final visualmente
@@ -21,4 +22,5 @@ carousel.addEventListener("click", () => {
 	books.forEach((book) => book.classList.remove("book-carousel__book-preview"));
 	if (books[0]) books[0].classList.add("book-carousel__book-preview");
 	if (books[2]) books[2].classList.add("book-carousel__book-preview");
+
 });

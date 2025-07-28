@@ -52,11 +52,10 @@ body {
   padding: 1.5625rem 1.25rem;
 }
 .header__menu svg {
-  color: #002F52;
+  color: #002f52;
 }
 .header__menu-active {
-  background: #002F52;
-  background: linear-gradient(90deg, #002F52 0%, #326589 100%);
+  background: linear-gradient(90deg, #002f52 0%, #326589 100%);
 }
 .header__menu-active svg {
   color: #ffffff;
@@ -67,7 +66,7 @@ body {
 .header__list-active {
   display: inline-block;
   position: absolute;
-  color: #002F52;
+  color: #002f52;
   background-color: #ffffff;
   top: 4.625rem;
   left: 0;
@@ -85,7 +84,7 @@ body {
 }
 
 .banner {
-  background-color: #002F52;
+  background-color: #002f52;
   padding: 1.625rem 1rem;
   text-align: center;
 }
@@ -127,20 +126,40 @@ body {
   background-position: 6% 90%;
 }
 
+.book-carousel {
+  background-color: #ebecee;
+}
 .book-carousel__subtitle {
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
-  color: #EB9B00;
+  color: #eb9b00;
   text-align: center;
   padding: 1.125rem 0;
   text-transform: uppercase;
+  background-color: #ffffff;
+}
+.book-carousel__indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+.book-carousel__indicator {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #002f52 0%, #326589 100%);
+}
+.book-carousel__indicator-disable {
+  background: #c4c4c4;
 }
 .book-carousel__carousel {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.9375rem;
+  padding-bottom: 0.625rem;
 }
 .book-carousel__book {
   width: 50%;
@@ -150,6 +169,57 @@ body {
 }
 .book-carousel__book-disable {
   display: none;
+}
+
+.interest {
+  padding: 0.625rem 1.25rem;
+  background-color: #ebecee;
+}
+.interest__card {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1.25rem 0.875rem;
+  border-radius: 0.625rem;
+  gap: 0.75rem;
+}
+.interest__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.interest__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #eb9b00;
+}
+.interest__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #002f52;
+}
+.interest__text {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #000000;
+}
+.interest__buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.interest__find_out {
+  padding: 0.75rem 0.875rem;
+  background-color: #eb9b00;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ebecee;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,23 +1,18 @@
 @use "tools";
 
 .book-carousel {
-    background-color: tools.$background-color;
+    @include tools.book-carousel;
 
     &__subtitle {
-        @include tools.subtitle-carousel;
+        @include tools.subtitle-book-carousel;
     }
 
     &__indicators {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: tools.px-to-rem(12) 0;
+        @include tools.indicators-book-carousel;
     }
 
     &__indicator {
-        width: tools.px-to-rem(10);
-        height: tools.px-to-rem(10);
-        border-radius: 5px;
+        @include tools.indicator-book-carousel;
         @include tools.gradient;
 
         &-disable {
@@ -26,18 +21,15 @@
     }
 
     &__carousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: tools.px-to-rem(15);
-        padding-bottom: tools.px-to-rem(10);
+        @include tools.carousel-book-carousel;
     }
 
     &__book {
-        width: 50%;
+        width: 40%;
+        box-shadow: tools.px-to-rem(2) tools.px-to-rem(4) tools.px-to-rem(8) rgb(0 0 0 / 0.15);
 
         &-preview {
-            width: 25%;
+            width: 20%;
         }
 
         &-disable {

@@ -159,20 +159,20 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.9375rem;
-  padding-bottom: 0.625rem;
 }
 .book-carousel__book {
-  width: 50%;
+  width: 40%;
+  box-shadow: 0.125rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 .book-carousel__book-preview {
-  width: 25%;
+  width: 20%;
 }
 .book-carousel__book-disable {
   display: none;
 }
 
 .interest {
-  padding: 0.625rem 1.25rem;
+  padding: 1.25rem 1.25rem;
   background-color: #ebecee;
 }
 .interest__card {
@@ -182,13 +182,14 @@ body {
   padding: 1.25rem 0.875rem;
   border-radius: 0.625rem;
   gap: 0.75rem;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 .interest__container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   justify-content: space-around;
-  align-items: center;
+  align-items: start;
 }
 .interest__subtitle {
   font-family: "Poppins", sans-serif;
@@ -214,12 +215,15 @@ body {
   justify-content: space-around;
 }
 .interest__find_out {
-  padding: 0.75rem 0.875rem;
+  padding: 0.75rem 0;
+  width: 100%;
+  max-width: 10.125rem;
   background-color: #eb9b00;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #ebecee;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */

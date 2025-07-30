@@ -226,4 +226,30 @@ body {
   text-align: center;
 }
 
+.topics {
+  background: linear-gradient(90deg, #002f52 0%, #326589 100%);
+  text-align: center;
+}
+.topics__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 1.5rem 0 1.5rem 0;
+}
+.topics__list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+.topics__items {
+  padding: 1rem 1.5rem;
+  background-color: #eb9b00;
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=index.css.map */

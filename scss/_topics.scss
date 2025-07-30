@@ -1,0 +1,30 @@
+@use "tools";
+
+.topics{
+    @include tools.gradient;
+    text-align: center;
+
+    &__subtitle{
+        font-family: tools.$font;
+        font-size: tools.$font-regular;
+        font-weight: tools.$weight-light;
+        color: tools.$primary-color;
+        text-transform: uppercase;
+        padding: tools.px-to-rem(24) 0 tools.px-to-rem(24) 0;
+    }
+
+    &__list{
+        display: flex;
+        gap: tools.px-to-rem(16);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: tools.px-to-rem(24);
+    }
+
+    &__items{
+        padding: tools.px-to-rem(16) tools.px-to-rem(24);
+        background-color: tools.$secondary-color;
+        color: tools.$primary-color;
+    }
+}

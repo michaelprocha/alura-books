@@ -1,33 +1,63 @@
 @use "tools";
 
-.interest {
-    @include tools.backgroud-card;
+.card {
+    padding: tools.px-to-rem(20) tools.px-to-rem(20);
+    background-color: tools.$background-color;
 
-    &__card{
-        @include tools.card;
+    &__container {
+        background-color: tools.$primary-color;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: tools.px-to-rem(20) tools.px-to-rem(14);
+        border-radius: tools.px-to-rem(10);
+        gap: tools.px-to-rem(12);
+        @include tools.shadow-card;
     }
 
-    &__container{
-        @include tools.container-card;
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: tools.px-to-rem(8);
+        justify-content: space-around;
+        align-items: start;
     }
 
     &__subtitle {
-        @include tools.subtitle-card;
+        font-family: tools.$font;
+        font-size: tools.$font-regular;
+        font-weight: tools.$weight-bold;
+        color: tools.$secondary-color;
     }
 
     &__title {
-        @include tools.title-card;
+        font-family: tools.$font;
+        font-size: tools.$font-medium;
+        font-weight: tools.$weight-bold;
+        color: tools.$tertiary-color;
     }
 
     &__text {
-        @include tools.text-card;
+        font-family: tools.$font;
+        font-size: tools.$font-small;
+        font-weight: tools.$weight-regular;
+        color: tools.$complementary-color;
     }
 
-    &__buttons{
-        @include tools.icons-card;
+    &__buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
     }
 
-    &__find_out{
-        @include tools.button-card;
+    &__find_out {
+        padding: tools.px-to-rem(12) 0;
+        width: 100%;
+        max-width: tools.px-to-rem(162);
+        background-color: tools.$secondary-color;
+        font-family: tools.$font;
+        font-size: tools.$font-regular;
+        font-weight: tools.$weight-bold;
+        color: tools.$background-color;
+        text-align: center;
     }
 }

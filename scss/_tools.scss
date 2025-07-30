@@ -10,6 +10,9 @@ $gradient-color: #326589;
 $background-color: #ebecee;
 $indicator-disable: #c4c4c4;
 $shadow: #858585;
+$shadow-card-color: rgb(0 0 0 / 0.25);
+$shadow-book-color: rgb(0 0 0 / 0.15);
+
 
 $font: "Poppins", sans-serif;
 
@@ -30,99 +33,10 @@ $font-xxxlarge: px-to-rem(36);
     background: linear-gradient(90deg, $tertiary-color 0%, $gradient-color 100%);
 }
 
-@mixin book-carousel {
-    background-color: $background-color;
+@mixin shadow-book {
+    box-shadow: px-to-rem(2) px-to-rem(4) px-to-rem(8) $shadow-book-color;
 }
 
-@mixin indicators-book-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: px-to-rem(12) 0;
-}
-
-@mixin indicator-book-carousel {
-    width: px-to-rem(10);
-    height: px-to-rem(10);
-    border-radius: 5px;
-}
-
-@mixin subtitle-book-carousel {
-    font-family: $font;
-    font-size: $font-medium;
-    font-weight: $weight-bold;
-    color: $secondary-color;
-    text-align: center;
-    padding: px-to-rem(18) 0;
-    text-transform: uppercase;
-    background-color: $primary-color;
-}
-
-@mixin carousel-book-carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: px-to-rem(15);
-}
-
-@mixin backgroud-card {
-    padding: px-to-rem(20) px-to-rem(20);
-    background-color: $background-color;
-}
-
-@mixin card {
-    background-color: $primary-color;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: px-to-rem(20) px-to-rem(14);
-    border-radius: px-to-rem(10);
-    gap: px-to-rem(12);
-    box-shadow: 0 px-to-rem(4) px-to-rem(4) rgb(0 0 0 / 0.25);
-}
-
-@mixin container-card {
-    display: flex;
-    flex-direction: column;
-    gap: px-to-rem(8);
-    justify-content: space-around;
-    align-items: start;
-}
-
-@mixin subtitle-card {
-    font-family: $font;
-    font-size: $font-regular;
-    font-weight: $weight-bold;
-    color: $secondary-color;
-}
-
-@mixin title-card {
-    font-family: $font;
-    font-size: $font-medium;
-    font-weight: $weight-bold;
-    color: $tertiary-color;
-}
-
-@mixin text-card {
-    font-family: $font;
-    font-size: $font-small;
-    font-weight: $weight-regular;
-    color: $complementary-color;
-}
-
-@mixin icons-card {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-
-@mixin button-card {
-    padding: px-to-rem(12) 0;
-    width: 100%;
-    max-width: px-to-rem(162);
-    background-color: $secondary-color;
-    font-family: $font;
-    font-size: $font-regular;
-    font-weight: $weight-bold;
-    color: $background-color;
-    text-align: center;
+@mixin shadow-card {
+    box-shadow: 0 px-to-rem(4) px-to-rem(4) $shadow-card-color;
 }

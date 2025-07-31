@@ -21,9 +21,10 @@
 		<header class="header">
 			<nav class="header__container">
 				<div class="header__menu">
-					<svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg alt="Menu" width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 24H36V20H0V24ZM0 14H36V10H0V14ZM0 0V4H36V0H0Z" fill="currentColor" />
 					</svg>
+					<h2 class="header__categories">Categorias</h2>
 					<ul class="header__list">
 						<li class="header__item"><a href="#">Categorias</a></li>
 						<li class="header__item"><a href="#">Programação</a></li>
@@ -33,8 +34,11 @@
 						<li class="header__item"><a href="#">Design & UX</a></li>
 					</ul>
 				</div>
-				<a class="header__logo" href="index.html"><img src="/assets/images/logo.svg" alt="Logo Alura books" /></a>
-				<a class="header__favorites" href="#"><img src="/assets/images/favorites.svg" alt="Favoritos" /></a>
+				<a class="header__favorites" href="#"><h2>Favoritos</h2></a>
+				<a class="header__bookcase" href="#"><h2>Minha estante</h2></a>
+				<a class="header__logo" href="index.html"><img src="/assets/images/logo.svg" alt="Logo Alura Books" /></a>
+				<h1 class="header__title"><img src="/assets/images/alurabooks.svg" alt="Alura Books"></h1>
+				<a class="header__img_favorites" href="#"><img src="/assets/images/favorites.svg" alt="Favoritos" /></a>
 				<a class="header__shopping" href="#"><img src="/assets/images/shopping.svg" alt="Carrinho de compras" /></a>
 				<a class="header__user" href="#"><img src="/assets/images/user.svg" alt="Perfil" /></a>
 			</nav>
@@ -121,7 +125,15 @@
 					<li class="topics__items">Java</li>
 				</ul>
 			</section>
+			<section class="newsletter">
+				<h2 class="newsletter__subtitle">Fique por dentro das novidades!</h2>
+				<p class="newsletter__text">Atualizações de e-books, novos livros, promoções e outros.</p>
+				<input class="newsletter__email" type="text" placeholder="Cadastre seu e-mail">
+			</section>
 		</main>
+		<footer class="footer">
+			<p class="footer__text">Grupo Alura</p>
+		</footer>
 		<script src="/javascript/index.js" defer></script>
 	</body>
 </html>

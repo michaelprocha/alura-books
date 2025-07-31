@@ -1,0 +1,40 @@
+@use "tools";
+
+.newsletter{
+    background-color: tools.$primary-color;
+    padding: tools.px-to-rem(24) tools.px-to-rem(24);
+
+    &__subtitle{
+        font-family: tools.$font;
+        font-size: tools.$font-medium;
+        font-weight: tools.$weight-medium;
+        color: tools.$tertiary-color;
+        margin-bottom: tools.px-to-rem(8);
+    }
+
+    &__text{
+        font-family: tools.$font;
+        font-size: tools.$font-regular;
+        font-weight: tools.$weight-light;
+        color: tools.$tertiary-color;
+        margin-bottom: tools.px-to-rem(24);
+    }
+
+    &__email{
+        border: tools.px-to-rem(1) solid tools.$tertiary-color;
+        border-radius: tools.px-to-rem(24);
+        height: tools.px-to-rem(44);
+        width: 100%;
+        text-align: center;
+
+        &::placeholder{
+            background-image: url(../assets/images/email.svg);
+            background-repeat: no-repeat;
+            background-position: left tools.px-to-rem(20) center;
+            font-family: tools.$font;
+            font-size: tools.$font-regular;
+            font-weight: tools.$weight-regular;
+            color: tools.$tertiary-color;
+        }
+    }
+}

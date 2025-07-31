@@ -47,18 +47,63 @@ body {
   grid-template-columns: max-content auto max-content max-content max-content;
   align-items: center;
 }
+@media (min-width: 64rem) {
+  .header__container {
+    padding: 0 3.75rem;
+    grid-template-columns: max-content max-content repeat(3, auto) max-content max-content;
+    grid-template-areas: "logo title categories favorites bookcase shopping user";
+    gap: 0.625rem;
+    align-items: center;
+    text-align: center;
+  }
+}
 .header__menu {
   position: relative;
   padding: 1.5625rem 1.25rem;
 }
+@media (min-width: 64rem) {
+  .header__menu {
+    grid-area: categories;
+  }
+}
 .header__menu svg {
   color: #002f52;
+}
+@media (min-width: 64rem) {
+  .header__menu svg {
+    display: none;
+  }
 }
 .header__menu-active {
   background: linear-gradient(90deg, #002f52 0%, #326589 100%);
 }
+@media (min-width: 64rem) {
+  .header__menu-active {
+    background: #ffffff;
+    padding: 0.9375rem 0.625rem;
+  }
+}
 .header__menu-active svg {
   color: #ffffff;
+}
+.header__categories {
+  display: none;
+}
+@media (min-width: 64rem) {
+  .header__categories {
+    display: block;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+  }
+  .header__categories-active {
+    background: linear-gradient(90deg, #002f52 0%, #326589 100%);
+    color: #ffffff;
+    padding: 0.625rem;
+  }
 }
 .header__list {
   display: none;
@@ -72,15 +117,103 @@ body {
   left: 0;
   padding: 1.25rem 6.25rem 1.25rem 1.25rem;
 }
+@media (min-width: 64rem) {
+  .header__list-active {
+    text-align: left;
+    top: 3.6875rem;
+    left: 0.625rem;
+    padding: 0 0.625rem;
+  }
+}
+.header__item {
+  padding: 0.875rem 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #002f52;
+}
+.header__item:first-child {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #eb9b00;
+}
+@media (min-width: 64rem) {
+  .header__item:first-child {
+    display: none;
+  }
+}
+.header__favorites {
+  display: none;
+}
+@media (min-width: 64rem) {
+  .header__favorites {
+    display: block;
+    grid-area: favorites;
+  }
+  .header__favorites h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+  }
+}
+.header__bookcase {
+  display: none;
+}
+@media (min-width: 64rem) {
+  .header__bookcase {
+    display: block;
+    grid-area: bookcase;
+  }
+  .header__bookcase h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 64rem) {
+  .header__img_favorites {
+    display: none;
+  }
+}
 .header__logo {
   padding-left: 0.9375rem;
+}
+@media (min-width: 64rem) {
+  .header__logo {
+    grid-area: logo;
+  }
+}
+.header__title {
+  display: none;
+}
+@media (min-width: 64rem) {
+  .header__title {
+    display: block;
+    grid-area: title;
+  }
 }
 .header__shopping {
   margin-left: 0.9375rem;
 }
+@media (min-width: 64rem) {
+  .header__shopping {
+    grid-area: shopping;
+  }
+}
 .header__user {
   margin-left: 0.9375rem;
   padding-right: 1.25rem;
+}
+@media (min-width: 64rem) {
+  .header__user {
+    grid-area: user;
+    margin-left: 1.9375rem;
+  }
 }
 
 .banner {
@@ -250,6 +383,54 @@ body {
   padding: 1rem 1.5rem;
   background-color: #eb9b00;
   color: #ffffff;
+}
+
+.newsletter {
+  background-color: #ffffff;
+  padding: 1.5rem 1.5rem;
+}
+.newsletter__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #002f52;
+  margin-bottom: 0.5rem;
+}
+.newsletter__text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #002f52;
+  margin-bottom: 1.5rem;
+}
+.newsletter__email {
+  border: 0.0625rem solid #002f52;
+  border-radius: 1.5rem;
+  height: 2.75rem;
+  width: 100%;
+  text-align: center;
+}
+.newsletter__email::placeholder {
+  background-image: url(../assets/images/email.svg);
+  background-repeat: no-repeat;
+  background-position: left 1.25rem center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #002f52;
+}
+
+.footer {
+  background-color: #ffffff;
+  border-top: 0.0625rem solid #858585;
+  padding: 0 1.5rem;
+}
+.footer__text {
+  padding: 1.0625rem 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
 }
 
 /*# sourceMappingURL=index.css.map */

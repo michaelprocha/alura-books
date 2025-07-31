@@ -7,24 +7,68 @@
         display: grid;
         grid-template-columns: max-content auto max-content max-content max-content;
         align-items: center;
+
+        @include tools.device(tablet) {
+            padding: 0 tools.px-to-rem(60);
+            grid-template-columns: max-content max-content repeat(3, auto) max-content max-content;
+            grid-template-areas: "logo title categories favorites bookcase shopping user";
+            gap: tools.px-to-rem(10);
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__menu {
         position: relative;
         padding: tools.px-to-rem(25) tools.px-to-rem(20);
+
+        @include tools.device(tablet) {
+            grid-area: categories;
+        }
+
         svg {
             color: tools.$tertiary-color;
+
+            @include tools.device(tablet) {
+                display: none;
+            }
         }
+
         &-active {
             @include tools.gradient;
+            @include tools.device(tablet) {
+                background: tools.$primary-color;
+                padding: tools.px-to-rem(15) tools.px-to-rem(10);
+            }
+
             svg {
                 color: tools.$primary-color;
             }
         }
     }
 
+    &__categories {
+        display: none;
+
+        @include tools.device(tablet) {
+            display: block;
+            cursor: pointer;
+            font-family: tools.$font;
+            font-size: tools.$font-regular;
+            font-weight: tools.$weight-regular;
+            color: tools.$complementary-color;
+            text-transform: uppercase;
+            &-active {
+                @include tools.gradient;
+                color: tools.$primary-color;
+                padding: tools.px-to-rem(10);
+            }
+        }
+    }
+
     &__list {
         display: none;
+
         &-active {
             display: inline-block;
             position: absolute;
@@ -33,19 +77,106 @@
             top: tools.px-to-rem(74);
             left: 0;
             padding: tools.px-to-rem(20) tools.px-to-rem(100) tools.px-to-rem(20) tools.px-to-rem(20);
+
+            @include tools.device(tablet) {
+                text-align: left;
+                top: tools.px-to-rem(59);
+                left: tools.px-to-rem(10);
+                padding: 0 tools.px-to-rem(10);
+            }
+        }
+    }
+
+    &__item {
+        padding: tools.px-to-rem(14) 0;
+        font-family: tools.$font;
+        font-size: tools.$font-regular;
+        font-weight: tools.$weight-regular;
+        color: tools.$tertiary-color;
+
+        &:first-child {
+            font-family: tools.$font;
+            font-size: tools.$font-regular;
+            font-weight: tools.$weight-bold;
+            color: tools.$secondary-color;
+
+            @include tools.device(tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__favorites {
+        display: none;
+
+        @include tools.device(tablet) {
+            display: block;
+            grid-area: favorites;
+
+            h2 {
+                font-family: tools.$font;
+                font-size: tools.$font-regular;
+                font-weight: tools.$weight-regular;
+                color: tools.$complementary-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__bookcase {
+        display: none;
+
+        @include tools.device(tablet) {
+            display: block;
+            grid-area: bookcase;
+
+            h2 {
+                font-family: tools.$font;
+                font-size: tools.$font-regular;
+                font-weight: tools.$weight-regular;
+                color: tools.$complementary-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__img_favorites {
+        @include tools.device(tablet) {
+            display: none;
         }
     }
 
     &__logo {
         padding-left: tools.px-to-rem(15);
+        @include tools.device(tablet) {
+            grid-area: logo;
+        }
+    }
+
+    &__title {
+        display: none;
+
+        @include tools.device(tablet) {
+            display: block;
+            grid-area: title;
+        }
     }
 
     &__shopping {
         margin-left: tools.px-to-rem(15);
+
+        @include tools.device(tablet) {
+            grid-area: shopping;
+        }
     }
 
     &__user {
         margin-left: tools.px-to-rem(15);
         padding-right: tools.px-to-rem(20);
+
+        @include tools.device(tablet) {
+            grid-area: user;
+            margin-left: tools.px-to-rem(31);
+        }
     }
 }

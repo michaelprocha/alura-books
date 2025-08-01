@@ -58,6 +58,8 @@
             font-weight: tools.$weight-regular;
             color: tools.$complementary-color;
             text-transform: uppercase;
+            justify-self: right;
+
             &-active {
                 @include tools.gradient;
                 color: tools.$primary-color;
@@ -76,30 +78,40 @@
             background-color: tools.$primary-color;
             top: tools.px-to-rem(74);
             left: 0;
-            padding: tools.px-to-rem(20) tools.px-to-rem(100) tools.px-to-rem(20) tools.px-to-rem(20);
+            padding: tools.px-to-rem(10) tools.px-to-rem(40) tools.px-to-rem(20) tools.px-to-rem(5);
 
             @include tools.device(tablet) {
                 text-align: left;
-                top: tools.px-to-rem(59);
-                left: tools.px-to-rem(10);
-                padding: 0 tools.px-to-rem(10);
+                top: 80%;
+                left: 40%;
+                padding: 0;
             }
         }
     }
 
     &__item {
-        padding: tools.px-to-rem(14) 0;
+        padding: tools.px-to-rem(20) tools.px-to-rem(30) tools.px-to-rem(20) tools.px-to-rem(20);
         font-family: tools.$font;
         font-size: tools.$font-regular;
         font-weight: tools.$weight-regular;
         color: tools.$tertiary-color;
+        text-transform: uppercase;
+
+        @include tools.device(tablet){
+            &:hover{
+                @include tools.gradient;
+                color: tools.$primary-color;
+            }
+        }
 
         &:first-child {
-            font-family: tools.$font;
-            font-size: tools.$font-regular;
-            font-weight: tools.$weight-bold;
-            color: tools.$secondary-color;
-
+            h2 {
+                font-family: tools.$font;
+                font-size: tools.$font-regular;
+                font-weight: tools.$weight-bold;
+                color: tools.$secondary-color;
+                text-transform: capitalize;
+            }
             @include tools.device(tablet) {
                 display: none;
             }
@@ -113,13 +125,11 @@
             display: block;
             grid-area: favorites;
 
-            h2 {
-                font-family: tools.$font;
-                font-size: tools.$font-regular;
-                font-weight: tools.$weight-regular;
-                color: tools.$complementary-color;
-                text-transform: uppercase;
-            }
+            font-family: tools.$font;
+            font-size: tools.$font-regular;
+            font-weight: tools.$weight-regular;
+            color: tools.$complementary-color;
+            text-transform: uppercase;
         }
     }
 
@@ -129,14 +139,13 @@
         @include tools.device(tablet) {
             display: block;
             grid-area: bookcase;
+            justify-self: left;
 
-            h2 {
-                font-family: tools.$font;
-                font-size: tools.$font-regular;
-                font-weight: tools.$weight-regular;
-                color: tools.$complementary-color;
-                text-transform: uppercase;
-            }
+            font-family: tools.$font;
+            font-size: tools.$font-regular;
+            font-weight: tools.$weight-regular;
+            color: tools.$complementary-color;
+            text-transform: uppercase;
         }
     }
 
@@ -148,6 +157,7 @@
 
     &__logo {
         padding-left: tools.px-to-rem(15);
+        margin-bottom: tools.px-to-rem(5);
         @include tools.device(tablet) {
             grid-area: logo;
         }
@@ -159,6 +169,7 @@
         @include tools.device(tablet) {
             display: block;
             grid-area: title;
+            margin-bottom: tools.px-to-rem(10);
         }
     }
 

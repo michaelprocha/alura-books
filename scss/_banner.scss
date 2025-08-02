@@ -5,12 +5,20 @@
     padding: tools.px-to-rem(26) tools.px-to-rem(16);
     text-align: center;
 
+    @include tools.device(tablet){
+        padding: tools.px-to-rem(74) tools.px-to-rem(16);
+    }
+
     &__subtitle{
         font-family: tools.$font;
         font-size: tools.$font-medium;
         font-weight: tools.$weight-bold;
         color: tools.$primary-color;
         margin-bottom: tools.px-to-rem(7);
+
+        @include tools.device(tablet){
+            font-size: tools.$font-xxxxlarge;
+        }
     }
 
     &__text{
@@ -43,6 +51,10 @@
             background-image: url(../assets/images/magnifying-glass.svg);
             background-repeat: no-repeat;
             background-position: 6% 90%;
+
+            @include tools.device(tablet){
+                background-position: 28% 90%;
+            }
         }
     }
 }

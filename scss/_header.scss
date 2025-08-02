@@ -24,6 +24,7 @@
 
         @include tools.device(tablet) {
             grid-area: categories;
+            padding-right: 0;
         }
 
         svg {

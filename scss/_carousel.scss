@@ -12,6 +12,11 @@
         padding: tools.px-to-rem(18) 0;
         text-transform: uppercase;
         background-color: tools.$primary-color;
+
+        @include tools.device(tablet) {
+            padding-top: tools.px-to-rem(51);
+            font-size: tools.$font-xxlarge;
+        }
     }
 
     &__indicators {
@@ -19,6 +24,10 @@
         align-items: center;
         justify-content: center;
         padding: tools.px-to-rem(12) 0;
+
+        @include tools.device(tablet) {
+            padding-top: tools.px-to-rem(31);
+        }
     }
 
     &__indicator {
@@ -26,6 +35,12 @@
         height: tools.px-to-rem(10);
         border-radius: 5px;
         @include tools.gradient;
+
+        @include tools.device(tablet) {
+            width: tools.px-to-rem(12);
+            height: tools.px-to-rem(12);
+            border-radius: 6px;
+        }
 
         &-disable {
             background: tools.$indicator-disable;
@@ -37,10 +52,16 @@
         justify-content: center;
         align-items: center;
         gap: tools.px-to-rem(15);
+
+        @include tools.device(tablet) {
+            padding: tools.px-to-rem(61);
+            gap: tools.px-to-rem(65);
+        }
     }
 
     &__book {
         width: 40%;
+        max-width: tools.px-to-rem(190);
         @include tools.shadow-book;
 
         &-preview {

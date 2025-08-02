@@ -64,6 +64,7 @@ body {
 @media (min-width: 64rem) {
   .header__menu {
     grid-area: categories;
+    padding-right: 0;
   }
 }
 .header__menu svg {
@@ -229,12 +230,22 @@ body {
   padding: 1.625rem 1rem;
   text-align: center;
 }
+@media (min-width: 64rem) {
+  .banner {
+    padding: 4.625rem 1rem;
+  }
+}
 .banner__subtitle {
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 0.4375rem;
+}
+@media (min-width: 64rem) {
+  .banner__subtitle {
+    font-size: 2.25rem;
+  }
 }
 .banner__text {
   font-family: "Poppins", sans-serif;
@@ -266,6 +277,11 @@ body {
   background-repeat: no-repeat;
   background-position: 6% 90%;
 }
+@media (min-width: 64rem) {
+  .banner__search::placeholder {
+    background-position: 28% 90%;
+  }
+}
 
 .carousel {
   background-color: #ebecee;
@@ -280,17 +296,35 @@ body {
   text-transform: uppercase;
   background-color: #ffffff;
 }
+@media (min-width: 64rem) {
+  .carousel__subtitle {
+    padding-top: 3.1875rem;
+    font-size: 1.625rem;
+  }
+}
 .carousel__indicators {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 0;
 }
+@media (min-width: 64rem) {
+  .carousel__indicators {
+    padding-top: 1.9375rem;
+  }
+}
 .carousel__indicator {
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 5px;
   background: linear-gradient(90deg, #002f52 0%, #326589 100%);
+}
+@media (min-width: 64rem) {
+  .carousel__indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 6px;
+  }
 }
 .carousel__indicator-disable {
   background: #c4c4c4;
@@ -301,8 +335,15 @@ body {
   align-items: center;
   gap: 0.9375rem;
 }
+@media (min-width: 64rem) {
+  .carousel__books {
+    padding: 3.8125rem;
+    gap: 4.0625rem;
+  }
+}
 .carousel__book {
   width: 40%;
+  max-width: 11.875rem;
   box-shadow: 0.125rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 .carousel__book-preview {

@@ -3,13 +3,16 @@
 .card {
     padding: tools.px-to-rem(20) tools.px-to-rem(20);
     background-color: tools.$background-color;
+    display: flex;
+    justify-content: center;
 
     &__container {
         background-color: tools.$primary-color;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        max-width: tools.px-to-rem(588);
         padding: tools.px-to-rem(20) tools.px-to-rem(14);
         border-radius: tools.px-to-rem(10);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: tools.px-to-rem(12);
         @include tools.shadow-card;
     }
@@ -18,8 +21,11 @@
         display: flex;
         flex-direction: column;
         gap: tools.px-to-rem(8);
-        justify-content: space-around;
         align-items: start;
+
+        &:last-child{
+            align-items: end;
+        }
     }
 
     &__subtitle {
@@ -41,12 +47,17 @@
         font-size: tools.$font-small;
         font-weight: tools.$weight-regular;
         color: tools.$complementary-color;
+        @include tools.device(tablet){
+            font-size: tools.$font-regular;
+        }
     }
 
     &__buttons {
-        display: flex;
+        margin-top: auto;
         width: 100%;
-        justify-content: space-around;
+        display: flex;
+        justify-content: start;
+        gap: tools.px-to-rem(30);
     }
 
     &__find_out {

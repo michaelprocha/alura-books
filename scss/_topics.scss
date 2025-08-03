@@ -3,6 +3,9 @@
 .topics{
     @include tools.gradient;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__subtitle{
         font-family: tools.$font;
@@ -11,15 +14,19 @@
         color: tools.$primary-color;
         text-transform: uppercase;
         padding: tools.px-to-rem(24) 0 tools.px-to-rem(24) 0;
+        @include tools.device(tablet){
+            font-size: tools.$font-xlarge;
+        }
     }
 
     &__list{
+        padding-bottom: tools.px-to-rem(24);
+        max-width: tools.px-to-rem(660);
         display: flex;
         gap: tools.px-to-rem(16);
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        padding-bottom: tools.px-to-rem(24);
     }
 
     &__items{

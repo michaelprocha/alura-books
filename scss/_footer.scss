@@ -4,6 +4,11 @@
     background-color: tools.$primary-color;
     border-top: tools.px-to-rem(1) solid tools.$shadow;
     padding: 0 tools.px-to-rem(24);
+    display: flex;
+    justify-content: space-between;
+    @include tools.device(tablet){
+        padding: tools.px-to-rem(46) tools.px-to-rem(24);
+    }
 
     &__text{
         padding: tools.px-to-rem(17) 0;
@@ -11,5 +16,35 @@
         font-size: tools.$font-regular;
         font-weight: tools.$weight-regular;
         color: tools.$complementary-color;
+        @include tools.device(tablet){
+            padding: 0;
+            font-size: tools.$font-xlarge;
+        }
+    }
+
+    &__list{
+        display: none;
+
+        @include tools.device(tablet){
+            display: flex;
+            flex-direction: column;
+            gap: tools.px-to-rem(10);
+        }
+    }
+
+    &__subtitle{
+        font-family: tools.$font;
+        font-size: tools.$font-small;
+        font-weight: tools.$weight-regular;
+        color: tools.$shadow;
+        text-transform: uppercase;
+        padding-bottom: tools.px-to-rem(10);
+    }
+
+    &__item{
+        font-family: tools.$font;
+        font-size: tools.$font-small;
+        font-weight: tools.$weight-regular;
+        color: tools.$list-item;
     }
 }

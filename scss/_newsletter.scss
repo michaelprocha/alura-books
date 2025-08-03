@@ -1,33 +1,52 @@
 @use "tools";
 
-.newsletter{
+.newsletter {
     background-color: tools.$primary-color;
     padding: tools.px-to-rem(24) tools.px-to-rem(24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include tools.device(tablet) {
+        padding: tools.px-to-rem(34) tools.px-to-rem(24) tools.px-to-rem(34) tools.px-to-rem(24);
+        flex-direction: row;
+    }
 
-    &__subtitle{
+    &__container {
+        max-width: tools.px-to-rem(390);
+    }
+
+    &__subtitle {
         font-family: tools.$font;
         font-size: tools.$font-medium;
         font-weight: tools.$weight-medium;
         color: tools.$tertiary-color;
         margin-bottom: tools.px-to-rem(8);
+        @include tools.device(tablet) {
+            font-size: tools.$font-xlarge;
+        }
     }
 
-    &__text{
+    &__text {
         font-family: tools.$font;
         font-size: tools.$font-regular;
         font-weight: tools.$weight-light;
         color: tools.$tertiary-color;
         margin-bottom: tools.px-to-rem(24);
+        @include tools.device(tablet) {
+            margin-bottom: 0;
+        }
     }
 
-    &__email{
+    &__email {
         border: tools.px-to-rem(1) solid tools.$tertiary-color;
         border-radius: tools.px-to-rem(24);
         height: tools.px-to-rem(44);
         width: 100%;
+        max-width: tools.px-to-rem(390);
         text-align: center;
 
-        &::placeholder{
+        &::placeholder {
             background-image: url(../assets/images/email.svg);
             background-repeat: no-repeat;
             background-position: left tools.px-to-rem(20) center;

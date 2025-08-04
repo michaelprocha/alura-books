@@ -46,5 +46,8 @@
         font-size: tools.$font-small;
         font-weight: tools.$weight-regular;
         color: tools.$list-item;
+        display: flex;
+        align-items: center;
+        gap: tools.px-to-rem(8);
     }
 }

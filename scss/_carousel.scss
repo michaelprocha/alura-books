@@ -17,6 +17,10 @@
             padding-top: tools.px-to-rem(51);
             font-size: tools.$font-xxlarge;
         }
+
+        @include tools.device(desktop) {
+            font-size: tools.$font-xxxlarge;
+        }
     }
 
     &__indicators {

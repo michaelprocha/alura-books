@@ -1,27 +1,27 @@
 @use "tools";
 
-.banner{
+.banner {
     background-color: tools.$tertiary-color;
     padding: tools.px-to-rem(26) tools.px-to-rem(16);
     text-align: center;
 
-    @include tools.device(tablet){
+    @include tools.device(tablet) {
         padding: tools.px-to-rem(74) tools.px-to-rem(16);
     }
 
-    &__subtitle{
+    &__subtitle {
         font-family: tools.$font;
         font-size: tools.$font-medium;
         font-weight: tools.$weight-bold;
         color: tools.$primary-color;
         margin-bottom: tools.px-to-rem(7);
 
-        @include tools.device(tablet){
+        @include tools.device(tablet) {
             font-size: tools.$font-xxxxlarge;
         }
     }
 
-    &__text{
+    &__text {
         font-family: tools.$font;
         font-size: tools.$font-regular;
         font-weight: tools.$weight-medium;
@@ -29,7 +29,7 @@
         margin-bottom: tools.px-to-rem(19);
     }
 
-    &__search{
+    &__search {
         border: tools.px-to-rem(1) solid tools.$primary-color;
         border-radius: tools.px-to-rem(24);
         width: 100%;
@@ -40,6 +40,10 @@
         font-weight: tools.$weight-regular;
         font-size: tools.$font-small;
         padding: 0 tools.px-to-rem(5) tools.px-to-rem(2) tools.px-to-rem(10);
+
+        @include tools.device(tablet) {
+            height: tools.px-to-rem(56);
+        }
 
         &::placeholder {
             font-family: tools.$font;
@@ -52,7 +56,8 @@
             background-repeat: no-repeat;
             background-position: 6% 90%;
 
-            @include tools.device(tablet){
+            @include tools.device(tablet) {
+                font-size: tools.$font-regular;
                 background-position: 28% 90%;
             }
         }

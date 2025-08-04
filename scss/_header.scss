@@ -16,15 +16,25 @@
             align-items: center;
             text-align: center;
         }
+
+        @include tools.device(desktop) {
+            grid-template-columns: max-content max-content max-content max-content auto max-content max-content;
+            grid-template-areas: "logo title categories favorites bookcase shopping user";
+        }
     }
 
     &__menu {
         position: relative;
         padding: tools.px-to-rem(25) tools.px-to-rem(20);
-
+        
         @include tools.device(tablet) {
             grid-area: categories;
             padding-right: 0;
+            padding: tools.px-to-rem(15) 0 tools.px-to-rem(15) tools.px-to-rem(10);
+        }
+
+        @include tools.device(desktop) {
+            padding-left: tools.px-to-rem(55);
         }
 
         svg {
@@ -39,7 +49,6 @@
             @include tools.gradient;
             @include tools.device(tablet) {
                 background: tools.$primary-color;
-                padding: tools.px-to-rem(15) tools.px-to-rem(10);
             }
 
             svg {
@@ -60,12 +69,17 @@
             color: tools.$complementary-color;
             text-transform: uppercase;
             justify-self: right;
-
+            padding: tools.px-to-rem(10);
+            
             &-active {
                 @include tools.gradient;
                 color: tools.$primary-color;
                 padding: tools.px-to-rem(10);
             }
+        }
+
+        @include tools.device(desktop) {
+            justify-self: center;
         }
     }
 
@@ -98,8 +112,8 @@
         color: tools.$tertiary-color;
         text-transform: uppercase;
 
-        @include tools.device(tablet){
-            &:hover{
+        @include tools.device(tablet) {
+            &:hover {
                 @include tools.gradient;
                 color: tools.$primary-color;
             }
@@ -132,6 +146,11 @@
             color: tools.$complementary-color;
             text-transform: uppercase;
         }
+
+        @include tools.device(desktop) {
+            display: block;
+            padding: 0 tools.px-to-rem(25) ;
+        }
     }
 
     &__bookcase {
@@ -141,7 +160,7 @@
             display: block;
             grid-area: bookcase;
             justify-self: left;
-
+            padding-left: tools.px-to-rem(10);
             font-family: tools.$font;
             font-size: tools.$font-regular;
             font-weight: tools.$weight-regular;
@@ -180,15 +199,50 @@
         @include tools.device(tablet) {
             grid-area: shopping;
         }
+
+        @include tools.device(desktop) {
+            display: flex;
+            align-items: center;
+            gap: tools.px-to-rem(6);
+        }
+    }
+
+    &__shopping_text {
+        display: none;
+        @include tools.device(desktop) {
+            display: block;
+            font-family: tools.$font;
+            font-size: tools.$font-large;
+            font-weight: tools.$weight-regular;
+            color: tools.$complementary-color;
+        }
     }
 
     &__user {
         margin-left: tools.px-to-rem(15);
         padding-right: tools.px-to-rem(20);
-
+        
         @include tools.device(tablet) {
             grid-area: user;
             margin-left: tools.px-to-rem(31);
+        }
+        
+        @include tools.device(desktop) {
+            margin-left: tools.px-to-rem(45);
+            display: flex;
+            align-items: center;
+            gap: tools.px-to-rem(6);
+        }
+    }
+
+    &__user_text {
+        display: none;
+        @include tools.device(desktop) {
+            display: block;
+            font-family: tools.$font;
+            font-size: tools.$font-large;
+            font-weight: tools.$weight-regular;
+            color: tools.$complementary-color;
         }
     }
 }

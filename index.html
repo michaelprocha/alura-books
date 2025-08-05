@@ -55,69 +55,79 @@
 				<p class="banner__text">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
 				<input class="banner__search" type="search" id="search" name="search" placeholder="Qual será sua próxima leitura?" />
 			</section>
-			<section class="carousel">
-				<h2 class="carousel__subtitle">Últimos lançamentos</h2>
-				<div class="carousel__indicators">
-					<button class="carousel__indicator"></button>
-				</div>
-				<div class="carousel__books">
-					<img
-					class="carousel__book"
-					src="/assets/images/apache-kafka-e-spring-boot.png"
-					alt="Livro Apache Kafka e Spring Boot"
-					/>
-					<img class="carousel__book" src="/assets/images/liderança.png" alt="Livro liderança em Design" />
-					<img class="carousel__book" src="/assets/images/javascript.png" alt="Livro JavaScript Assertivo" />
-				</div>
-			</section>
-			<section class="card">
-				<div class="card__container">
-					<div class="card__column">
-						<h2 class="card__subtitle">Talvez você também se interesse por...</h2>
-						<h1 class="card__title">Angular 11 e Firebase</h1>
-						<p class="card__text">Construindo uma aplicação integrada com a plataforma do Google.</p>
-						<div class="card__buttons">
-							<button class="card__button"><img src="/assets/images/favorites.svg" alt="Adicionar aos favoritos" /></button>
-							<button class="card__button"><img src="/assets/images/shopping.svg" alt="Adicionar ao carrinho" /></button>
+
+			<section class="container">
+				<h2 class="container__subtitle">Últimos lançamentos</h2>
+				<div class="main-area">
+					<div class="carousel">
+						<div class="carousel__indicators">
+							<button class="carousel__indicator"></button>
+						</div>
+						<div class="carousel__books">
+							<img
+								class="carousel__book"
+								src="/assets/images/apache-kafka-e-spring-boot.png"
+								alt="Livro Apache Kafka e Spring Boot"
+							/>
+							<img class="carousel__book" src="/assets/images/liderança.png" alt="Livro liderança em Design" />
+							<img class="carousel__book" src="/assets/images/javascript.png" alt="Livro JavaScript Assertivo" />
 						</div>
 					</div>
+					<div class="card">
+						<div class="card__container">
+							<div class="card__column">
+								<h2 class="card__subtitle">Talvez você também se interesse por...</h2>
+								<h1 class="card__title">Angular 11 e Firebase</h1>
+								<p class="card__text">Construindo uma aplicação integrada com a plataforma do Google.</p>
+								<div class="card__buttons">
+									<button class="card__button"><img src="/assets/images/favorites.svg" alt="Adicionar aos favoritos" /></button>
+									<button class="card__button"><img src="/assets/images/shopping.svg" alt="Adicionar ao carrinho" /></button>
+								</div>
+							</div>
 
-					<div class="card__column">
-						<img class="card__logo" src="/assets/images/image-angular.png" alt="Logo do angular" />
-						<a class="card__find_out">Saiba mais</a>
-					</div>
-				</div>
-			</section>
-			<section class="carousel">
-				<h2 class="carousel__subtitle">Mais vendidos</h2>
-				<div class="carousel__indicators">
-					<button class="carousel__indicator"></button>
-				</div>
-				<div class="carousel__books">
-					<img class="carousel__book" src="/assets/images/construct2.png" alt="Livro Apache Kafka e Spring Boot" />
-					<img class="carousel__book" src="/assets/images/guia-front-end.png" alt="Livro liderança em Design" />
-					<img class="carousel__book" src="/assets/images/gestão.png" alt="Livro JavaScript Assertivo" />
-				</div>
-			</section>
-			<section class="card">
-				<div class="card__container">
-					<div class="card__column">
-						<img class="card__star" src="assets/images/estrelinhas.svg" alt="Autora cinco estrelas" />
-						<h2 class="card__subtitle">Autora do Mês</h2>
-						<h1 class="card__title">Juliana Agarikov</h1>
-						<p class="card__text">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
-						<div class="card__buttons">
-							<button class="card__button"><img src="/assets/images/favorites.svg" alt="Adicionar aos favoritos" /></button>
-							<button class="card__button"><img src="/assets/images/shopping.svg" alt="Adicionar ao carrinho" /></button>
+							<div class="card__column_image">
+								<img class="card__logo" src="/assets/images/image-angular.png" alt="Logo do angular" />
+								<a class="card__find_out">Saiba mais</a>
+							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="container">
+				<h2 class="container__subtitle">Mais vendidos</h2>
+				<div class="main-area">
+					<div class="carousel">
+						<div class="carousel__indicators">
+							<button class="carousel__indicator"></button>
+						</div>
+						<div class="carousel__books">
+							<img class="carousel__book" src="/assets/images/construct2.png" alt="Livro Apache Kafka e Spring Boot" />
+							<img class="carousel__book" src="/assets/images/guia-front-end.png" alt="Livro liderança em Design" />
+							<img class="carousel__book" src="/assets/images/gestão.png" alt="Livro JavaScript Assertivo" />
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__container">
+							<div class="card__column">
+								<img class="card__star" src="assets/images/estrelinhas.svg" alt="Autora cinco estrelas" />
+								<h2 class="card__subtitle">Autora do Mês</h2>
+								<h1 class="card__title">Juliana Agarikov</h1>
+								<p class="card__text">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
+								<div class="card__buttons">
+									<button class="card__button"><img src="/assets/images/favorites.svg" alt="Adicionar aos favoritos" /></button>
+									<button class="card__button"><img src="/assets/images/shopping.svg" alt="Adicionar ao carrinho" /></button>
+								</div>
+							</div>
 
-					<div class="card__column">
-						<img class="card__logo" src="/assets/images/perfil-escritora.png" alt="Logo do angular" />
-						<a class="card__find_out">Saiba mais</a>
+							<div class="card__column_image">
+								<img class="card__logo" src="/assets/images/perfil-escritora.png" alt="Logo do angular" />
+								<a class="card__find_out">Saiba mais</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
+
 			<section class="topics">
 				<h2 class="topics__subtitle">Tópicos visitados recentemente</h2>
 				<ul class="topics__list">

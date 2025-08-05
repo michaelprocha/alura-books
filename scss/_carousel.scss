@@ -1,8 +1,6 @@
 @use "tools";
 
-.carousel {
-    background-color: tools.$background-color;
-
+.container {
     &__subtitle {
         font-family: tools.$font;
         font-size: tools.$font-medium;
@@ -22,8 +20,24 @@
             font-size: tools.$font-xxxlarge;
         }
     }
+}
+
+.main-area {
+    @include tools.device(desktop) {
+        padding-top: tools.px-to-rem(30);
+        padding-bottom: tools.px-to-rem(100);
+        display: flex;
+        background-color: tools.$background-color;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+.carousel {
+    background-color: tools.$background-color;
 
     &__indicators {
+        background-color: tools.$background-color;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -60,6 +74,10 @@
         @include tools.device(tablet) {
             padding: tools.px-to-rem(61);
             gap: tools.px-to-rem(65);
+        }
+
+        @include tools.device(desktop) {
+            padding-top: tools.px-to-rem(30);
         }
     }
 
